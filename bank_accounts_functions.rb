@@ -58,14 +58,21 @@ end
 def total_cash_in_bank
   total = 0
   for person in ACCOUNTS
-    total += person[:amount]
+    total += person[:amount].to_i
   end
-  puts total
+  #must remember to return a value if using this function in another function, just using 'puts' will display it but return a value of nil
+  return total
 end
 
 def last_bank_account_holder
   ACCOUNTS.last[:holder_name]
 end
+
+def average_account_value
+  total_cash_in_bank/number_of_bank_accounts
+end
+
+
 
 
 
