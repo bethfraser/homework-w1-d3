@@ -111,6 +111,13 @@ end
 
 
 
+def bank_logbook
+  puts "Name\t\tAccount Type\t\tBalance"
+  puts "------------------------------------------------"
+  for person in ACCOUNTS
+    puts "#{person[:holder_name]}\t\t#{person[:type]}\t\t#{person[:amount]}" 
+  end
+end
 
 
 

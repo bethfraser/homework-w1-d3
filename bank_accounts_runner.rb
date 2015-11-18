@@ -48,3 +48,5 @@ puts "\n"
 
 ###any other functionality you want to add.
 
+###print bank logbook
+bank_logbook()
