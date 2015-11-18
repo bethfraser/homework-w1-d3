@@ -11,7 +11,7 @@ puts "first bank account owner is #{first_bank_owner}"
 puts "\n"
 
 ###print to screen name of all bank account owners
-puts "name of bank acccount owners"
+puts "name of bank account owners"
 print_owner_names()
 puts "\n"
 
@@ -21,6 +21,9 @@ puts "total in bank #{total_cash}"
 puts "\n"
 
 ###last account owner
+last_bank_owner = last_bank_account_holder()
+puts "last bank account owner is #{last_bank_owner}"
+puts "\n"
 
 ###average bank account value
 

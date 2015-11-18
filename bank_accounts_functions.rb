@@ -63,6 +63,9 @@ def total_cash_in_bank
   puts total
 end
 
+def last_bank_account_holder
+  ACCOUNTS.last[:holder_name]
+end
 
 
 
