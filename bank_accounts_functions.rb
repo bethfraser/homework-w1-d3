@@ -95,6 +95,21 @@ def largest_account_holder
   return person_largest
 end
 
+def largest_personal_account
+  amount = 0
+  person_largest_personal = ""
+
+  for person in ACCOUNTS
+    if person[:amount] > amount && person.has_value?("personal")
+      person_largest_personal = person[:holder_name]
+      amount = person[:amount]
+    end
+  end
+  return person_largest_personal
+end
+
+
+
 
 
 

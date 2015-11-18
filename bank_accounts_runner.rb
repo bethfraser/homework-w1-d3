@@ -40,7 +40,11 @@ puts "\n"
 largest_account_name = largest_account_holder()
 puts "holder of largest account: #{largest_account_name}"
 puts "\n"
+
 ###holder of largest personal account
+largest_personal_name = largest_personal_account()
+puts "holder of largest personal account: #{largest_personal_name}"
+puts "\n"
 
 ###any other functionality you want to add.
 
