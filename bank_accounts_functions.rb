@@ -55,6 +55,15 @@ def print_owner_names
   end 
 end
 
+def total_cash_in_bank
+  total = 0
+  for person in ACCOUNTS
+    total += person[:amount]
+  end
+  puts total
+end
+
+
 
 
 
