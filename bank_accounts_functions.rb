@@ -49,6 +49,11 @@ def first_bank_account_holder
   ACCOUNTS.first[:holder_name]
 end
 
+def print_owner_names
+  for person in ACCOUNTS
+  puts person[:holder_name]
+  end 
+end
 
 
 
