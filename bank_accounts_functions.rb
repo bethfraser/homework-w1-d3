@@ -82,6 +82,19 @@ def total_business_cash
   return total
 end
 
+def largest_account_holder
+  amount = 0
+  person_largest = ""
+
+  for person in ACCOUNTS
+    if person[:amount] > amount
+      person_largest = person[:holder_name]
+      amount = person[:amount]
+    end
+  end
+  return person_largest
+end
+
 
 
 
