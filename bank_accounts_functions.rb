@@ -75,9 +75,7 @@ end
 def total_business_cash
   total = 0
   for person in ACCOUNTS
-    if person.has_value?("business")
-      total += person[:amount]
-    end
+   total += person[:amount] if person.has_value?("business")
   end
   return total
 end
@@ -85,7 +83,6 @@ end
 def largest_account_holder
   amount = 0
   person_largest = ""
-
   for person in ACCOUNTS
     if person[:amount] > amount
       person_largest = person[:holder_name]
@@ -109,7 +106,7 @@ def largest_personal_account
 end
 
 
-
+# My own extra functions
 
 def bank_logbook
   puts "Name\t\tAccount Type\t\tBalance"
@@ -118,6 +115,18 @@ def bank_logbook
     puts "#{person[:holder_name]}\t\t#{person[:type]}\t\t#{person[:amount]}" 
   end
 end
+
+
+def balance_check(input_name)
+  for person in ACCOUNTS
+    if person[:holder_name] == input_name
+      return person[:amount] 
+    end
+  end
+end
+
+
+
 
 
 

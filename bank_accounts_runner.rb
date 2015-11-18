@@ -50,3 +50,8 @@ puts "\n"
 
 ###print bank logbook
 bank_logbook()
+puts "\n"
+
+###look up a person's account by inputting their name
+
+puts "Tony's balance is: #{balance_check("Tony")}"
