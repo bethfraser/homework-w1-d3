@@ -58,7 +58,7 @@ end
 def total_cash_in_bank
   total = 0
   for person in ACCOUNTS
-    total += person[:amount].to_i
+    total += person[:amount]
   end
   #must remember to return a value if using this function in another function, just using 'puts' will display it but return a value of nil
   return total
@@ -72,7 +72,15 @@ def average_account_value
   total_cash_in_bank/number_of_bank_accounts
 end
 
-
+def total_business_cash
+  total = 0
+  for person in ACCOUNTS
+    if person.has_value?("business")
+      total += person[:amount]
+    end
+  end
+  return total
+end
 
 
 
